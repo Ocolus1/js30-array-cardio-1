@@ -1,113 +1,165 @@
-import Image from "next/image";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	// Get your shorts on - this is an array workout!
+	// ## Array Cardio Day 1
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	// Some data we can work with
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+	const inventors = [
+		{ first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+		{ first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+		{ first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+		{ first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+		{ first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+		{ first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+		{ first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+		{ first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+		{ first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+		{ first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+		{ first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+		{ first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 },
+	];
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+	const people = [
+		'Bernhard, Sandra',
+		'Bethea, Erin',
+		'Becker, Carl',
+		'Bentsen, Lloyd',
+		'Beckett, Samuel',
+		'Blake, William',
+		'Berger, Ric',
+		'Beddoes, Mick',
+		'Beethoven, Ludwig',
+		'Belloc, Hilaire',
+		'Begin, Menachem',
+		'Bellow, Saul',
+		'Benchley, Robert',
+		'Blair, Robert',
+		'Benenson, Peter',
+		'Benjamin, Walter',
+		'Berlin, Irving',
+		'Benn, Tony',
+		'Benson, Leana',
+		'Bent, Silas',
+		'Berle, Milton',
+		'Berry, Halle',
+		'Biko, Steve',
+		'Beck, Glenn',
+		'Bergman, Ingmar',
+		'Black, Elk',
+		'Berio, Luciano',
+		'Berne, Eric',
+		'Berra, Yogi',
+		'Berry, Wendell',
+		'Bevan, Aneurin',
+		'Ben-Gurion, David',
+		'Bevel, Ken',
+		'Biden, Joseph',
+		'Bennington, Chester',
+		'Bierce, Ambrose',
+		'Billings, Josh',
+		'Birrell, Augustine',
+		'Blair, Tony',
+		'Beecher, Henry',
+		'Biondo, Frank',
+	];
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+	// Array.prototype.filter()
+	// 1. Filter the list of inventors for those who were born in the 1500's
+	const fifteen = inventors.filter(
+		(inventor) => inventor.year >= 1500 && inventor.year < 1600
+	);
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+	console.table(fifteen);
+
+	// Array.prototype.map()
+	// 2. Give us an array of the inventor first and last names
+	const fullNames = inventors.map(
+		(inventor) => `${inventor.first} ${inventor.last}`
+	);
+	console.log(fullNames);
+
+	// Array.prototype.sort()
+	// 3. Sort the inventors by birthdate, oldest to youngest
+	// const ordered = inventors.sort(function(a, b) {
+	//   if(a.year > b.year) {
+	//     return 1;
+	//   } else {
+	//     return -1;
+	//   }
+	// });
+
+	const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+	console.table(ordered);
+
+	// Array.prototype.reduce()
+	// 4. How many years did all the inventors live?
+	const totalYears = inventors.reduce((total, inventor) => {
+		return total + (inventor.passed - inventor.year);
+	}, 0);
+
+	console.log(totalYears);
+
+	// 5. Sort the inventors by years lived
+	const oldest = inventors.sort(function (a, b) {
+		const lastInventor = a.passed - a.year;
+		const nextInventor = b.passed - b.year;
+		return lastInventor > nextInventor ? -1 : 1;
+	});
+	console.table(oldest);
+
+	// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+	// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+	// const category = document.querySelector('.mw-category');
+	// const links = Array.from(category.querySelectorAll('a'));
+	// const de = links
+	//             .map(link => link.textContent)
+	//             .filter(streetName => streetName.includes('de'));
+
+	// 7. sort Exercise
+	// Sort the people alphabetically by last name
+	const alpha = people.sort((lastOne, nextOne) => {
+		const [aLast, aFirst] = lastOne.split(', ');
+		const [bLast, bFirst] = nextOne.split(', ');
+		return aLast > bLast ? 1 : -1;
+	});
+	console.log(alpha);
+
+	// 8. Reduce Exercise
+	// Sum up the instances of each of these
+	const data = [
+		'car',
+		'car',
+		'truck',
+		'truck',
+		'bike',
+		'walk',
+		'car',
+		'van',
+		'bike',
+		'walk',
+		'car',
+		'van',
+		'car',
+		'truck',
+		'pogostick',
+	];
+
+	const transportation = data.reduce(function (obj, item) {
+		if (!obj[item]) {
+			obj[item] = 0;
+		}
+		obj[item]++;
+		return obj;
+	}, {});
+
+	console.log(transportation);
+	return (
+		<div>
+			<p className="p-8">
+				<em>Psst: have a look at the JavaScript Console</em> 💁
+			</p>
+		</div>
+	);
 }
